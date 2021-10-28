@@ -1,18 +1,25 @@
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
-import { Container } from "./components/styles/Container.styled";
-import TopNav from "./components/TopNav/TopNav";
-import Logo from "./components/Logo/Logo"
+
+import Portal from "./pages/portal";
+import Users from "./pages/users_page";
+import Installs from "./pages/install_page"
 
 function App() {
   return (
-    <>
-      <TopNav />
-        <Logo/>
-      <Container>
-        <span>Test Test 123</span>
-  
-      </Container>
-    </>
+    <Router>
+      <Switch>
+        <Route path="/installs">
+          <Installs />
+        </Route>
+        <Route path="/users">
+          <Users />
+        </Route>
+        <Route path="/">
+          <Portal />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
