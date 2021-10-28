@@ -1,20 +1,28 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+import { installs } from "../../data/installs.json";
 
 export default function InstallList() {
   return (
     <div>
-      <ul class="list-group rounded-0">
-        <li class="list-group-item">install1</li>
-        <li class="list-group-item">install2</li>
-        <li class="list-group-item">install3</li>
-        <li class="list-group-item">install4</li>
-        <li class="list-group-item">install5</li>
-        
-        
-        
-        
-        
-      </ul>
+      <div>
+        {installs.map((data, key) => {
+          return (
+            <div key={key} className="">
+              <Link
+                to={`/installs/${data.install}`}
+              >
+                <div className="card">
+                  <div className="card-body">
+                    <span className="card-title">{data.install}</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

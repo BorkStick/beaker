@@ -8,7 +8,7 @@ import TopNav from "../components/TopNav/TopNav";
 import Logo from "../components/Logo/Logo";
 import InstallList from "../components/InstallList/InstallList";
 
-export default function install_page() {
+export default function installs_page() {
   return (
     <>
       <TopNav />

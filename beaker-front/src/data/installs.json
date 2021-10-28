@@ -1,27 +1,39 @@
 {
     "installs": [
       {
-        "id": 0,
+        "install_id": 0,
         "install": "borkhost",
+        "owner_id": "000000",
         "owner": "terry.fromit@bork.tech",
+        "server_ip": "10.0.0.80",
+        "temp_domain": "http://borkhost.bork.host",
         "domain": "http://bork.host"
       },
       {
-        "id": 0,
+        "install_id": 0,
         "install": "tylortech",
+        "owner_id": "000000",
         "owner": "terry.fromit@bork.tech",
+        "server_ip": "10.0.0.80",
+        "temp_domain": "http://borkhost.bork.host",
         "domain": "http://tylor.tech"
       },
       {
-        "id": 0,
+        "install_id": 0,
         "install": "tylorninja",
+        "owner_id": "000000",
         "owner": "terry.fromit@bork.tech",
+        "server_ip": "10.0.0.80",
+        "temp_domain": "http://borkhost.bork.host",
         "domain": "http://tylor.ninja"
       },
       {
-        "id": 0,
+        "install_id": 0,
         "install": "borktech",
+        "owner_id": "000000",
         "owner": "terry.fromit@bork.tech",
+        "server_ip": "10.0.0.80",
+        "temp_domain": "http://borkhost.bork.host",
         "domain": "http://bork.tech"
       }
     ]

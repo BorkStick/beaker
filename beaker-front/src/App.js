@@ -3,7 +3,7 @@ import "./App.css";
 
 import Portal from "./pages/portal";
 import Users from "./pages/users_page";
-import Installs from "./pages/install_page";
+import Installs from "./pages/installs_page";
 import Install from "./components/Install/Install"
 
 function App() {
