@@ -1,9 +1,28 @@
-import React from 'react'
+import React from "react";
+
+import { Container } from "../components/styles/Container.styled";
+import { InnerContainer } from "../components/styles/InnerContainer.styled";
+import { Card } from "../components/styles/Card.styled";
+
+import TopNav from "../components/TopNav/TopNav";
+import Logo from "../components/Logo/Logo";
+import InstallList from "../components/InstallList/InstallList";
 
 export default function install_page() {
-    return (
-        <div>
-            <h1>Install Page</h1>
-        </div>
-    )
+  return (
+    <>
+      <TopNav />
+      <Logo />
+      <div>
+        <Container>
+        <h1>Installs</h1>
+        <InnerContainer>
+          <Card>
+            <InstallList />
+          </Card>
+          </InnerContainer>
+        </Container>
+      </div>
+    </>
+  );
 }
