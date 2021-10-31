@@ -11,6 +11,7 @@ import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
 import ButtonRow from "../ButtonRow/ButtonRow";
 import DangerButtonRow from "../ButtonRow/DangerButtonRow";
+import { Link } from "react-router-dom";
 
 export default class Install extends Component {
   render() {
@@ -61,7 +62,11 @@ export default class Install extends Component {
                     <span>
                       <b>Owner: </b>
                     </span>
+                    <Link
+                to={`/users/${install.user}`} className="text-dark"
+              >
                     <span>{install.owner}</span>
+                    </Link>
                   </div>
                 </div>
               </div>

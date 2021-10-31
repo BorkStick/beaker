@@ -3,7 +3,7 @@
       {
         "install_id": 0,
         "install": "borkhost",
-        "owner_id": "000000",
+        "user": "0001",
         "owner": "terry.fromit@bork.tech",
         "server_ip": "10.0.0.80",
         "temp_domain": "http://borkhost.bork.host",
@@ -12,29 +12,65 @@
       {
         "install_id": 0,
         "install": "tylortech",
-        "owner_id": "000000",
-        "owner": "terry.fromit@bork.tech",
+        "user": "0003",
+        "owner": "tylor.wurz@bork.tech",
         "server_ip": "10.0.0.80",
-        "temp_domain": "http://borkhost.bork.host",
+        "temp_domain": "http://tylortech.bork.host",
         "domain": "http://tylor.tech"
       },
       {
         "install_id": 0,
         "install": "tylorninja",
-        "owner_id": "000000",
-        "owner": "terry.fromit@bork.tech",
+        "user": "0003",
+        "owner": "tylor.wurz@bork.tech",
         "server_ip": "10.0.0.80",
-        "temp_domain": "http://borkhost.bork.host",
+        "temp_domain": "http://tylorninja.bork.host",
         "domain": "http://tylor.ninja"
       },
       {
         "install_id": 0,
         "install": "borktech",
-        "owner_id": "000000",
-        "owner": "terry.fromit@bork.tech",
+        "user": "0002",
+        "owner": "steve.fromit@bork.tech",
         "server_ip": "10.0.0.80",
-        "temp_domain": "http://borkhost.bork.host",
+        "temp_domain": "http://borktech.bork.host",
         "domain": "http://bork.tech"
+      },
+      {
+        "install_id": 0,
+        "install": "thechillestchill",
+        "user": "0002",
+        "owner": "steve.fromit@bork.tech",
+        "server_ip": "10.0.0.80",
+        "temp_domain": "http://thechillestchill.bork.host",
+        "domain": "http://thechillestchill.com"
+      },
+      {
+        "install_id": 0,
+        "install": "lightofjin",
+        "user": "0004",
+        "owner": "matt@lightofjin.com",
+        "server_ip": "10.0.0.80",
+        "temp_domain": "http://lightofjin.bork.host",
+        "domain": "http://lightofjin.com"
+      },
+      {
+        "install_id": 0,
+        "install": "wynram",
+        "user": "0005",
+        "owner": "martin@wynram.com",
+        "server_ip": "10.0.0.80",
+        "temp_domain": "http://wynram.bork.host",
+        "domain": "http://wynram.com"
+      },
+      {
+        "install_id": 0,
+        "install": "texcanwellness",
+        "user": "0006",
+        "owner": "nathan@texcanwellness.com",
+        "server_ip": "10.0.0.80",
+        "temp_domain": "http://texcanwellness.bork.host",
+        "domain": "http://texcanwellness.com"
       }
     ]
   }

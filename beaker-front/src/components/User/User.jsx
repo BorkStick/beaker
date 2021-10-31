@@ -28,6 +28,20 @@ export default class User extends Component {
               <p>{user.last_name}</p>
               <p>{user.email}</p>
             </Card>
+            <Card>
+              <h5 className="text-center">Installs</h5>
+              <p>{user.user_id}</p>
+              <p>{user.first_name}</p>
+              <p>{user.last_name}</p>
+              <p>{user.email}</p>
+            </Card>
+            <Card>
+              <h5 className="text-center">Billing</h5>
+              <p>{user.user_id}</p>
+              <p>{user.first_name}</p>
+              <p>{user.last_name}</p>
+              <p>{user.email}</p>
+            </Card>
           </InnerContainer>
         </Container>
       </div>

@@ -1,6 +1,12 @@
 {
   "users": [
     {
+      "user": "0000",
+      "first_name": "web",
+      "last_name": "master",
+      "email": "webmaster@bork.host"
+    },
+    {
       "user": "0001",
       "first_name": "terry",
       "last_name": "fromit",
@@ -17,6 +23,24 @@
       "first_name": "tylor",
       "last_name": "wurz",
       "email": "tylor.wurz@bork.tech"
+    },
+    {
+      "user": "0004",
+      "first_name": "matt",
+      "last_name": "garza",
+      "email": "lightofjin@bork.tech"
+    },
+    {
+      "user": "0005",
+      "first_name": "martin",
+      "last_name": "wurz",
+      "email": "martin@wynram.com"
+    },
+    {
+      "user": "0006",
+      "first_name": "nathan",
+      "last_name": "wurz",
+      "email": "nathan@texcanwellness.com"
     }
   ]
 }
