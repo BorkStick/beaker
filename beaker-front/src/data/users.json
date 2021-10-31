@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "user": "0001",
+      "first_name": "terry",
+      "last_name": "fromit",
+      "email": "terry.fromit@bork.tech"
+    },
+    {
+      "user": "0002",
+      "first_name": "steve",
+      "last_name": "fromit",
+      "email": "steve.fromit@bork.tech"
+    },
+    {
+      "user": "0003",
+      "first_name": "tylor",
+      "last_name": "wurz",
+      "email": "tylor.wurz@bork.tech"
+    }
+  ]
+}

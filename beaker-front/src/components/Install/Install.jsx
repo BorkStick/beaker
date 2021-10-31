@@ -75,14 +75,14 @@ export default class Install extends Component {
               <div className="row">
                 <div className="col">
                   <h5 className="text-center">Access Logs</h5>
-                  <div className="d-grid gap-2 justify-content-center">
+                  <div className="d-flex flex-column gap-2 justify-content-center">
                     <Button button_text="Nginx" />
                     <Button button_text="Apache" />
                   </div>
                 </div>
-                <div className="col d-block ">
+                <div className="col">
                   <h5 className="text-center">Error Logs</h5>
-                  <div className="d-grid gap-2 justify-content-center">
+                  <div className="d-flex flex-column  gap-2 justify-content-center">
                     <Button button_text="Nginx" />
                     <Button button_text="Apache" />
                   </div>

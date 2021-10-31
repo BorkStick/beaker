@@ -1,15 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+import { users } from "../../data/users.json";
 
 export default function UserList() {
   return (
     <div>
-      <ul class="list-group rounded-0">
-        <li class="list-group-item">user1</li>
-        <li class="list-group-item">user2</li>
-        <li class="list-group-item">user3</li>
-        <li class="list-group-item">user4</li>
-        <li class="list-group-item">user5</li>
-      </ul>
+      <div>
+        {users.map((data, key) => {
+          return (
+            <div key={key} className="">
+              <Link
+                to={`/users/${data.user}`} className="text-dark"
+              >
+                <div className="card">
+                  <div className="card-body">
+                    <span className="card-title">{data.first_name} </span>
+                    <span className="card-title">{data.last_name}</span>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

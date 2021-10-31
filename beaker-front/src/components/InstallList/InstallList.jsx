@@ -11,7 +11,7 @@ export default function InstallList() {
           return (
             <div key={key} className="">
               <Link
-                to={`/installs/${data.install}`}
+                to={`/installs/${data.install}`} className="text-dark"
               >
                 <div className="card">
                   <div className="card-body">

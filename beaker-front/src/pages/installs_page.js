@@ -15,7 +15,7 @@ export default function installs_page() {
       <Logo />
       <div>
         <Container>
-        <h1>Installs</h1>
+        <h3>Installs</h3>
         <InnerContainer>
           <Card>
             <InstallList />

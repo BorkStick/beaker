@@ -1,8 +1,9 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 import Portal from "./pages/portal";
 import Users from "./pages/users_page";
+import User from "./components/User/User"
 import Installs from "./pages/installs_page";
 import Install from "./components/Install/Install"
 
@@ -18,9 +19,14 @@ function App() {
           exact
           render={(props) => <Install install={props.match.params.install} />}
         />
-        <Route path="/users">
+        <Route exact path="/users">
           <Users />
         </Route>
+        <Route
+          path="/users/:user"
+          exact
+          render={(props) => <User user={props.match.params.user} />}
+        />
         <Route path="/">
           <Portal />
         </Route>

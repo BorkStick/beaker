@@ -17,7 +17,7 @@ export default function users_page() {
         <Logo />
         <div>
         <Container>
-        <h1>Users</h1>
+        <h3>Users</h3>
         <InnerContainer>
           <Card>
             <UserList />
