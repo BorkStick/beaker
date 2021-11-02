@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface InstallRepository extends CrudRepository<Install, Long> {
 
-    public List<Install> findByTitleContainingIgnoreCase(String title);
+    public List<Install> findByInstallNameContainingIgnoreCase(String installName);
 
 
     public List<Install> findByCreatedAtAfter(Date date);

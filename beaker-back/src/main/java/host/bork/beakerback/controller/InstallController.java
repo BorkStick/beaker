@@ -30,15 +30,15 @@ public class InstallController {
     }
 
     @GetMapping(value = "/{value}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Install> getByTitle(@PathVariable("value") String title) {
-        Iterable<Install> installsIterable = installRepository.findByTitleContainingIgnoreCase(title);
+    public List<Install> getByInstallName(@PathVariable("value") String installName) {
+        Iterable<Install> installsIterable = installRepository.findByInstallNameContainingIgnoreCase(installName);
         List<Install> installList = new ArrayList<>();
         installsIterable.forEach(a -> installList.add(a));
         return installList;
     }
 
     @GetMapping(value = "/date/{after}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Install> getByDate(@PathVariable("after") @DateTimeFormat(pattern = "dd-MM-yyyy") Date date) {
+    public List<Install> getByDate(@PathVariable("after") @DateTimeFormat(pattern = "MM-dd-yyyy") Date date) {
         Iterable<Install> installsIterable = installRepository.findByCreatedAtAfter(date);
         List<Install> installList = new ArrayList<>();
         installsIterable.forEach(a -> installList.add(a));

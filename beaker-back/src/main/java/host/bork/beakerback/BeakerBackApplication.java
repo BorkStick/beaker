@@ -27,24 +27,37 @@ public class BeakerBackApplication {
 			long count = installRepository.count();
 
 			if (count == 0) {
-				SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+				SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
 
 				try {
 					Install borkhost = new Install();
-					borkhost.setTitle("borkhost");
-					borkhost.setBody("Install1 Install1Install1 Install1 Install1");
-					Date date = df.parse("10/5/2018");
+					borkhost.setInstallName("borkhost");
+					borkhost.setTempDomain("https://borkhost.bork.host");
+					borkhost.setDomain("https://bork.host");
+					borkhost.setServerIp("10.0.0.68");
+					Date date = df.parse("1/1/2018");
 					borkhost.setCreatedAt(date);
 
 					//
 					Install borktech = new Install();
-					borktech.setTitle("borktech");
-					borktech.setBody("Install2 Install2 Install2 Install2");
-					date = df.parse("2/3/2017");
+					borktech.setInstallName("borktech");
+					borktech.setTempDomain("https://borktech.bork.host");
+					borktech.setDomain("https://bork.tech");
+					borktech.setServerIp("10.0.0.80");
+					date = df.parse("10/1/2021");
 					borktech.setCreatedAt(date);
+
+					Install tylorninja = new Install();
+					tylorninja.setInstallName("tylorninja");
+					tylorninja.setTempDomain("https://tylorninja.bork.host");
+					tylorninja.setDomain("https://tylor.ninja");
+					tylorninja.setServerIp("10.0.0.80");
+					date = df.parse("12/10/2000");
+					tylorninja.setCreatedAt(date);
 
 					installRepository.save(borkhost);
 					installRepository.save(borktech);
+					installRepository.save(tylorninja);
 				} catch (ParseException e) {
 					e.printStackTrace();
 				}
