@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/installs")
+@RequestMapping("/api/installs")
 public class InstallController {
 
     @Autowired
