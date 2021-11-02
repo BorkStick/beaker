@@ -19,7 +19,7 @@ public class BeakerBackApplication {
 		SpringApplication.run(BeakerBackApplication.class, args);
 	}
 
-
+	// adds stuff to the database
 	@Bean
 	@Autowired
 	CommandLineRunner runner(InstallRepository installRepository) {
