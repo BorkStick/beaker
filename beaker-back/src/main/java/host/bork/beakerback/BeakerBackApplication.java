@@ -20,6 +20,7 @@ public class BeakerBackApplication {
 	}
 
 
+	// adds stuff to the database
 	@Bean
 	@Autowired
 	CommandLineRunner runner(InstallRepository installRepository) {
