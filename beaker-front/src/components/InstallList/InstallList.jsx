@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Loading from "../Loading/Loading";
 
 class InstallList extends Component {
   state = {
@@ -17,7 +18,7 @@ class InstallList extends Component {
     const { installs, isLoading } = this.state;
 
     if (isLoading) {
-      return <p>Loading...</p>;
+      return <Loading/>;
     }
 
     return (

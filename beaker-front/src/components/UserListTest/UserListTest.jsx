@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Loading from "../Loading/Loading";
 
-class UserList extends Component {
+class UserListTest extends Component {
   state = {
     isLoading: true,
     users: [],
@@ -18,7 +17,7 @@ class UserList extends Component {
     const { users, isLoading } = this.state;
 
     if (isLoading) {
-      return <Loading/>;
+      return <p>Loading...</p>;
     }
 
     return (
@@ -26,8 +25,8 @@ class UserList extends Component {
         <header className="">
           <div className="">
             {users.map((users) => (
-              <div key={users.userId}>
-                <Link to={`/users/${users.userName}`} className="text-dark">
+              <div key={users.installId}>
+                <Link to={`/installs/${users.userName}`} className="text-dark">
                   <div className="card">
                     <div className="card-body">
                       <span className="card-title">{users.userName}</span>
@@ -43,4 +42,4 @@ class UserList extends Component {
   }
 }
 
-export default UserList;
+export default UserListTest;

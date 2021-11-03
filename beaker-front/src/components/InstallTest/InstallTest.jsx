@@ -12,24 +12,35 @@ import Button from "../Button/Button";
 import ButtonRow from "../ButtonRow/ButtonRow";
 import DangerButtonRow from "../ButtonRow/DangerButtonRow";
 import { Link } from "react-router-dom";
+import Loading from "../Loading/Loading";
+import { BackButton } from "../Button/BackButton";
 
 export default class InstallTest extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   state = {
     isLoading: true,
     installs: [],
   };
 
   async componentDidMount() {
-    const response = await fetch(`/api/installs/`);
+    console.log("this" + this.props.match.params.install);
+    const response = await fetch(`/api/installs/${this.props.match.params.install}`);
+    // console.log(await response.json());
     const body = await response.json();
-    this.setState({ installs: body, isLoading: false });
+    // const bodytest = {installName: "test test"}
+    this.setState({ installs: body, isLoading: false }, () =>
+      console.log(this.state.installs[0].installName)
+    );
   }
 
   render() {
-    const { installs, isLoading } = this.state;
-
-    if (isLoading) {
-      return <p>Loading...</p>;
+    // const { installs, isLoading } = this.state;
+    // this.state.isLoading
+    if (this.state.isLoading) {
+      return <Loading />;
     }
 
     // const install = data.installs.find((p) => p.install === this.props.install);
@@ -39,9 +50,10 @@ export default class InstallTest extends Component {
         <TopNav />
         <Logo />
         <Container>
-          <h3 className="">{installs.installName}</h3>
+          <h3 className="">{this.state.installs[0].installName}</h3>
           <InnerContainer>
-            <Card>
+            <BackButton />
+            {/* <Card>
               <h5 className="text-center">Install Info</h5>
               <div className="text-center pb-4">
                 
@@ -114,7 +126,7 @@ export default class InstallTest extends Component {
             <Card>
               <h5 className="text-center">Danger Zone</h5>
               <DangerButtonRow />
-            </Card>
+            </Card> */}
           </InnerContainer>
         </Container>
       </div>

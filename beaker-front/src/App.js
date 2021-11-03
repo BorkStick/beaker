@@ -9,6 +9,7 @@ import Install from "./components/Install/Install"
 import InstallTest from "./components/InstallTest/InstallTest"
 
 function App() {
+  
   return (
     <Router>
       <Switch>
@@ -18,7 +19,7 @@ function App() {
         <Route
           path="/installs/:install"
           exact
-          render={(props) => <Install install={props.match.params.installName} />}
+          render={(props) => <InstallTest { ...props} />}
         />
         <Route exact path="/users">
           <Users />
