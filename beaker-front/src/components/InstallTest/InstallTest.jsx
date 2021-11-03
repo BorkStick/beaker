@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import data from "../../data/installs.json";
+// import data from "../../data/installs.json";
 
 import { Container } from "../styles/Container.styled";
 import { InnerContainer } from "../styles/InnerContainer.styled";
@@ -12,27 +12,42 @@ import Button from "../Button/Button";
 import ButtonRow from "../ButtonRow/ButtonRow";
 import DangerButtonRow from "../ButtonRow/DangerButtonRow";
 import { Link } from "react-router-dom";
-import { BackButton } from "../Button/BackButton";
 
-export default class Install extends Component {
+export default class InstallTest extends Component {
+  state = {
+    isLoading: true,
+    installs: [],
+  };
+
+  async componentDidMount() {
+    const response = await fetch(`/api/installs/`);
+    const body = await response.json();
+    this.setState({ installs: body, isLoading: false });
+  }
+
   render() {
-    const install = data.installs.find((p) => p.installs === this.props.installs);
+    const { installs, isLoading } = this.state;
+
+    if (isLoading) {
+      return <p>Loading...</p>;
+    }
+
+    // const install = data.installs.find((p) => p.install === this.props.install);
 
     return (
       <div className="">
         <TopNav />
         <Logo />
         <Container>
-          <h3 className="">{install.install}</h3>
+          <h3 className="">{installs.installName}</h3>
           <InnerContainer>
-            <BackButton/>
             <Card>
               <h5 className="text-center">Install Info</h5>
               <div className="text-center pb-4">
                 
                 <span>
-                  <a href={install.domain} target="_blank" rel="noreferrer">
-                    {install.domain}
+                  <a href={installs.domain} target="_blank" rel="noreferrer">
+                    {installs.domain}
                   </a>
                 </span>
               </div>
@@ -42,7 +57,7 @@ export default class Install extends Component {
                     <span>
                       <b>Install Name: </b>
                     </span>
-                    <span>{install.install}</span>
+                    <span>{installs.installName}</span>
                   </div>
                   <div>
                     <span>
@@ -50,11 +65,11 @@ export default class Install extends Component {
                     </span>
                     <span>
                       <a
-                        href={install.temp_domain}
+                        href={installs.tempDomain}
                         target="_blank"
                         rel="noreferrer"
                       >
-                        {install.temp_domain}
+                        {installs.tempDomain}
                       </a>
                     </span>
                   </div>
@@ -64,8 +79,11 @@ export default class Install extends Component {
                     <span>
                       <b>Owner: </b>
                     </span>
-                    <span>{install.owner}</span>
-                    <Link/>
+                    <Link
+                to={`/users/${installs.user}`} className="text-dark"
+              >
+                    <span>{installs.owner}</span>
+                    </Link>
                   </div>
                 </div>
               </div>

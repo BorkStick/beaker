@@ -8,6 +8,7 @@ import { Card } from "../styles/Card.styled";
 
 import TopNav from "../TopNav/TopNav";
 import Logo from "../Logo/Logo";
+import { BackButton } from "../Button/BackButton";
 
 
 export default class User extends Component {
@@ -21,6 +22,7 @@ export default class User extends Component {
         <Container>
           <h3 className="">{user.user}</h3>
           <InnerContainer>
+          <BackButton/>
             <Card>
               <h5 className="text-center">User Info</h5>
               <p>{user.user_id}</p>

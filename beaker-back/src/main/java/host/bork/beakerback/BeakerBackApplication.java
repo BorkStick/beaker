@@ -56,9 +56,18 @@ public class BeakerBackApplication {
 					date = df.parse("12/10/2000");
 					tylorninja.setCreatedAt(date);
 
+					Install borklol = new Install();
+					borklol.setInstallName("borklol");
+					borklol.setTempDomain("https://borklol.bork.host");
+					borklol.setDomain("https://bork.lol");
+					borklol.setServerIp("10.0.0.80");
+					date = df.parse("12/10/2000");
+					borklol.setCreatedAt(date);
+
 					installRepository.save(borkhost);
 					installRepository.save(borktech);
 					installRepository.save(tylorninja);
+					installRepository.save(borklol);
 				} catch (ParseException e) {
 					e.printStackTrace();
 				}

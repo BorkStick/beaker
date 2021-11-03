@@ -1,28 +1,45 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { installs } from "../../data/installs.json";
+class InstallList extends Component {
+  state = {
+    isLoading: true,
+    installs: [],
+  };
 
-export default function InstallList() {
-  return (
-    <div>
-      <div>
-        {installs.map((data, key) => {
-          return (
-            <div key={key} className="">
-              <Link
-                to={`/installs/${data.install}`} className="text-dark"
-              >
-                <div className="card">
-                  <div className="card-body">
-                    <span className="card-title">{data.install}</span>
+  async componentDidMount() {
+    const response = await fetch("/api/installs");
+    const body = await response.json();
+    this.setState({ installs: body, isLoading: false });
+  }
+
+  render() {
+    const { installs, isLoading } = this.state;
+
+    if (isLoading) {
+      return <p>Loading...</p>;
+    }
+
+    return (
+      <div className="">
+        <header className="">
+          <div className="">
+            {installs.map((installs) => (
+              <div key={installs.installId}>
+                <Link to={`/installs/${installs.installName}`} className="text-dark">
+                  <div className="card">
+                    <div className="card-body">
+                      <span className="card-title">{installs.installName}</span>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </div>
-          );
-        })}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </header>
       </div>
-    </div>
-  );
+    );
+  }
 }
+
+export default InstallList;

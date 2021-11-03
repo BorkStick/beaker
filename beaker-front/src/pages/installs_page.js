@@ -7,7 +7,7 @@ import { Card } from "../components/styles/Card.styled";
 import TopNav from "../components/TopNav/TopNav";
 import Logo from "../components/Logo/Logo";
 import InstallList from "../components/InstallList/InstallList";
-import InstallListTest from "../components/InstallListTest/InstallListTest";
+import { BackButton } from "../components/Button/BackButton";
 
 export default function installs_page() {
   return (
@@ -18,8 +18,9 @@ export default function installs_page() {
         <Container>
         <h3>Installs</h3>
         <InnerContainer>
+          <BackButton/>
           <Card>
-            <InstallListTest />
+            <InstallList />
           </Card>
           </InnerContainer>
         </Container>
