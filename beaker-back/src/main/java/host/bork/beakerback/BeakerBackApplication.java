@@ -2,6 +2,8 @@ package host.bork.beakerback;
 
 import host.bork.beakerback.model.Install;
 import host.bork.beakerback.repository.InstallRepository;
+import host.bork.beakerback.model.User;
+import host.bork.beakerback.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,7 +25,7 @@ public class BeakerBackApplication {
 	// adds stuff to the database
 	@Bean
 	@Autowired
-	CommandLineRunner runner(InstallRepository installRepository) {
+	CommandLineRunner runner1(InstallRepository installRepository) {
 		return (args) -> {
 			long count = installRepository.count();
 
@@ -69,6 +71,51 @@ public class BeakerBackApplication {
 					installRepository.save(tylorninja);
 					installRepository.save(borklol);
 				} catch (ParseException e) {
+					e.printStackTrace();
+				}
+			}
+		};
+	}
+
+	@Bean
+	@Autowired
+	CommandLineRunner runner2(UserRepository userRepository) {
+		return (args) -> {
+			long count2 = userRepository.count();
+
+			if (count2 == 0) {
+
+
+				try {
+					User borkhost = new User();
+					borkhost.setUserName("borkhost");
+					borkhost.setFirstName("Bork");
+					borkhost.setLastName("Host");
+					borkhost.setEmail("admin@bork.host");
+
+
+					User tylorwurz = new User();
+					tylorwurz.setUserName("tylorwurz");
+					tylorwurz.setFirstName("Tylor");
+					tylorwurz.setLastName("Wurz");
+					tylorwurz.setEmail("tylor@bork.host");
+
+
+					User terryfromit = new User();
+					terryfromit.setUserName("terryfromit");
+					terryfromit.setFirstName("Terry");
+					terryfromit.setLastName("Fromit");
+					terryfromit.setEmail("terry.fromit@bork.host");
+
+
+
+
+					userRepository.save(borkhost);
+					userRepository.save(tylorwurz);
+					userRepository.save(terryfromit);
+
+
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}

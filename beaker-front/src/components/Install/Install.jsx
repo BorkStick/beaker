@@ -64,8 +64,9 @@ export default class Install extends Component {
                     <span>
                       <b>Owner: </b>
                     </span>
+                    <Link to={`/users/${install.user}`}>
                     <span>{install.owner}</span>
-                    <Link/>
+                    </Link>
                   </div>
                 </div>
               </div>

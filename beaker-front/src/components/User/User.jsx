@@ -9,6 +9,7 @@ import { Card } from "../styles/Card.styled";
 import TopNav from "../TopNav/TopNav";
 import Logo from "../Logo/Logo";
 import { BackButton } from "../Button/BackButton";
+import UserInstallList from "../UserInstallList/UserInstallList";
 
 
 export default class User extends Component {
@@ -32,10 +33,7 @@ export default class User extends Component {
             </Card>
             <Card>
               <h5 className="text-center">Installs</h5>
-              <p>{user.user_id}</p>
-              <p>{user.first_name}</p>
-              <p>{user.last_name}</p>
-              <p>{user.email}</p>
+              <UserInstallList/>
             </Card>
             <Card>
               <h5 className="text-center">Billing</h5>
