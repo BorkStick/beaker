@@ -20,11 +20,10 @@ export default class User extends Component {
   };
 
   async componentDidMount() {
-    console.log("this" + this.props.match.params.user);
     const response = await fetch(`/api/users/${this.props.match.params.user}`);
     const body = await response.json();
     this.setState({ users: body, isLoading: false }, () =>
-      console.log(this.state.users[0].userName)
+      console.log("Current User: " + this.state.users[0].userName)
     );
   }
 
@@ -73,7 +72,7 @@ export default class User extends Component {
             </Card>
             <Card>
               <h5 className="text-center">Billing</h5>
-              <h3>$0.00</h3>
+              <h2>$0.00</h2>
             </Card>
           </InnerContainer>
         </Container>

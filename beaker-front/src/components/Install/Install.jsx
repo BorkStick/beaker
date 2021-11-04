@@ -23,11 +23,11 @@ export default class Install extends Component {
   };
 
   async componentDidMount() {
-    console.log("this" + this.props.match.params.install);
+    
     const response = await fetch(`/api/installs/${this.props.match.params.install}`);
     const body = await response.json();
     this.setState({ installs: body, isLoading: false }, () =>
-      console.log(this.state.installs[0].installName)
+      console.log("Current Install: " + this.state.installs[0].installName)
     );
   }
 
@@ -76,6 +76,12 @@ export default class Install extends Component {
                         {this.state.installs[0].tempDomain}
                       </a>
                     </span>
+                    <div>
+                    <span>
+                      <b>Server IP: </b>
+                    </span>
+                    <span>{this.state.installs[0].serverIp}</span>
+                  </div>
                   </div>
                 </div>
                 <div className="col">

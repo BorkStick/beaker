@@ -10,8 +10,6 @@ import Logo from "../components/Logo/Logo";
 import SearchInstall from "../components/SearchInstall/SearchInstall";
 import AddInstall from "../components/AddInstall/AddInstall";
 
-
-
 export default function portal() {
   return (
     <>
@@ -21,13 +19,22 @@ export default function portal() {
         <h3>Portal</h3>
         <InnerContainer>
           <Card>
-            <Link to="/installs">
-            <button className="btn btn-dark">Install List</button>
-            </Link>
+            <div className="row ">
+              <div className="col d-flex justify-content-center">
+                <Link to="/installs">
+                  <button className="btn btn-dark btn-block rounded-0">
+                    Install List
+                  </button>
+                </Link>
+              </div>
+              <div className="col d-flex justify-content-center">
+                <Link to="/users">
+                  <button className="btn btn-dark rounded-0 btn-block">User List</button>
+                </Link>
+              </div>
+            </div>
 
-            <Link to="/users">
-            <button className="btn btn-dark" >User List</button>
-            </Link>
+          
           </Card>
           <Card>
             <SearchInstall />

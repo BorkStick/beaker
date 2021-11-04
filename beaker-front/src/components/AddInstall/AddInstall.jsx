@@ -3,25 +3,19 @@ import React from "react";
 export default function AddInstall() {
   return (
     <div>
-        <h3>Add Install</h3>
-      <form>
-        <div className="mb-3">
-          <label className="form-label">
-            Install Name
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          
+      <h3>Add Install</h3>
+      <div className="input-group mb-3">
+        <input type="text" className="form-control rounded-0" placeholder="Install Name" />
+        <div className="input-group-append">
+          <button
+            className="btn btn-dark rounded-0"
+            type="button"
+            id="button-addon2"
+          >
+            <i className="fas fa-plus"></i>
+          </button>
         </div>
-        
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
+      </div>
     </div>
   );
 }

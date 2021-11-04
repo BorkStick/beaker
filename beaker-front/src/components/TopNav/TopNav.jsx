@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function TopNav() {
   return (
     <div className="">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-expand-md navbar-dark bg-dark">
         <div className="container-fluid">
           
           <button
