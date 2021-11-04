@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import data from "../../data/users.json";
 
 import { Container } from "../styles/Container.styled";
 import { InnerContainer } from "../styles/InnerContainer.styled";
@@ -13,9 +12,7 @@ import UserInstallList from "../UserInstallList/UserInstallList";
 import Loading from "../Loading/Loading";
 
 export default class User extends Component {
-  constructor(props) {
-    super(props);
-  }
+
 
   state = {
     isLoading: true,

@@ -16,9 +16,7 @@ import Loading from "../Loading/Loading";
 import { BackButton } from "../Button/BackButton";
 
 export default class InstallTest extends Component {
-  constructor(props) {
-    super(props);
-  }
+
 
   state = {
     isLoading: true,

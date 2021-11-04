@@ -6,7 +6,7 @@ export default function DangerButton(props) {
       type="button"
       className="btn btn-danger col-3 rounded-0"
       data-bs-toggle="button"
-      autocomplete="off"
+      autoComplete="off"
     >
       {props.button_text}
     </button>

@@ -7,7 +7,6 @@ import { Card } from "../components/styles/Card.styled";
 import TopNav from "../components/TopNav/TopNav";
 import Logo from "../components/Logo/Logo";
 import UserList from "../components/UserList/UserList";
-import UserListTest from "../components/UserListTest/UserListTest";
 import { BackButton } from '../components/Button/BackButton';
 
 

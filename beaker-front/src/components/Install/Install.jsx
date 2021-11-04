@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-// import data from "../../data/installs.json";
 
 import { Container } from "../styles/Container.styled";
 import { InnerContainer } from "../styles/InnerContainer.styled";
@@ -16,9 +15,7 @@ import Loading from "../Loading/Loading";
 import { BackButton } from "../Button/BackButton";
 
 export default class Install extends Component {
-  constructor(props) {
-    super(props);
-  }
+
 
   state = {
     isLoading: true,

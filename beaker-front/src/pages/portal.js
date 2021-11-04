@@ -9,7 +9,7 @@ import TopNav from "../components/TopNav/TopNav";
 import Logo from "../components/Logo/Logo";
 import SearchInstall from "../components/SearchInstall/SearchInstall";
 import AddInstall from "../components/AddInstall/AddInstall";
-import Button from "../components/Button/Button";
+
 
 
 export default function portal() {
@@ -22,11 +22,11 @@ export default function portal() {
         <InnerContainer>
           <Card>
             <Link to="/installs">
-            <a className="btn btn-dark" href="#" role="button">Install List</a>
+            <button className="btn btn-dark">Install List</button>
             </Link>
 
             <Link to="/users">
-            <a className="btn btn-dark" href="#" role="button">User List</a>
+            <button className="btn btn-dark" >User List</button>
             </Link>
           </Card>
           <Card>

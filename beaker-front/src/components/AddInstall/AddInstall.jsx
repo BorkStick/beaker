@@ -6,7 +6,7 @@ export default function AddInstall() {
         <h3>Add Install</h3>
       <form>
         <div className="mb-3">
-          <label class="form-label">
+          <label className="form-label">
             Install Name
           </label>
           <input
