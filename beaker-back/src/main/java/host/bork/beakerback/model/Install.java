@@ -14,6 +14,15 @@ public class Install implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long installId;
 
+
+    // Owner ID
+    @Column(name = "ownerId", length = 10, nullable = false)
+    private long ownerId;
+
+    // Install Name
+    @Column(name = "ownerUserName", length = 100, nullable = false)
+    private String ownerUserName;
+
     // Install Name
     @Column(name = "installName", length = 100, nullable = false)
     private String installName;
@@ -84,5 +93,21 @@ public class Install implements Serializable {
 
     public void setServerIp(String serverIp) {
         this.serverIp = serverIp;
+    }
+
+    public long getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(long ownerId) {
+        this.ownerId = ownerId;
+    }
+
+    public String getOwnerUserName() {
+        return ownerUserName;
+    }
+
+    public void setOwnerUserName(String ownerUserName) {
+        this.ownerUserName = ownerUserName;
     }
 }

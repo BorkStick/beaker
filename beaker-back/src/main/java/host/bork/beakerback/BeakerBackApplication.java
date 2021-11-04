@@ -35,6 +35,8 @@ public class BeakerBackApplication {
 				try {
 					Install borkhost = new Install();
 					borkhost.setInstallName("borkhost");
+					borkhost.setOwnerId(1);
+					borkhost.setOwnerUserName("borkhost");
 					borkhost.setTempDomain("https://borkhost.bork.host");
 					borkhost.setDomain("https://bork.host");
 					borkhost.setServerIp("10.0.0.68");
@@ -44,6 +46,8 @@ public class BeakerBackApplication {
 					//
 					Install borktech = new Install();
 					borktech.setInstallName("borktech");
+					borktech.setOwnerId(2);
+					borktech.setOwnerUserName("tylorwurz");
 					borktech.setTempDomain("https://borktech.bork.host");
 					borktech.setDomain("https://bork.tech");
 					borktech.setServerIp("10.0.0.80");
@@ -52,6 +56,8 @@ public class BeakerBackApplication {
 
 					Install tylorninja = new Install();
 					tylorninja.setInstallName("tylorninja");
+					tylorninja.setOwnerId(2);
+					tylorninja.setOwnerUserName("tylorwurz");
 					tylorninja.setTempDomain("https://tylorninja.bork.host");
 					tylorninja.setDomain("https://tylor.ninja");
 					tylorninja.setServerIp("10.0.0.80");
@@ -60,6 +66,8 @@ public class BeakerBackApplication {
 
 					Install borklol = new Install();
 					borklol.setInstallName("borklol");
+					borklol.setOwnerId(3);
+					borklol.setOwnerUserName("terryfromit");
 					borklol.setTempDomain("https://borklol.bork.host");
 					borklol.setDomain("https://bork.lol");
 					borklol.setServerIp("10.0.0.80");

@@ -6,7 +6,7 @@ import Users from "./pages/users_page";
 import User from "./components/User/User"
 import Installs from "./pages/installs_page";
 import Install from "./components/Install/Install"
-import InstallTest from "./components/InstallTest/InstallTest"
+
 
 function App() {
   
@@ -19,7 +19,7 @@ function App() {
         <Route
           path="/installs/:install"
           exact
-          render={(props) => <InstallTest { ...props} />}
+          render={(props) => <Install { ...props} />}
         />
         <Route exact path="/users">
           <Users />
