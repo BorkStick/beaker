@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 export default function TopNav() {
   return (
     <div className="">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container-fluid">
           
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -16,35 +16,35 @@ export default function TopNav() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <Link to="/" class="nav-link">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link to="/" className="nav-link">
                   Portal
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to="/installs" class="nav-link">
+              <li className="nav-item">
+                <Link to="/installs" className="nav-link">
                   Installs
                 </Link>
               </li>
 
-              <li class="nav-item">
-                <Link to="/users" class="nav-link">
+              <li className="nav-item">
+                <Link to="/users" className="nav-link">
                   Users
                 </Link>
               </li>
             </ul>
-            <form class="d-flex">
+            <form className="d-flex">
               <input
-                class="form-control me-2 rounded-0"
+                className="form-control me-2 rounded-0"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-light rounded-0" type="submit">
+              <button className="btn btn-outline-light rounded-0" type="submit">
                 Search
               </button>
             </form>

@@ -27,7 +27,7 @@ function App() {
         <Route
           path="/users/:user"
           exact
-          render={(props) => <User user={props.match.params.user} />}
+          render={(props) => <User { ...props} />}
         />
         <Route path="/">
           <Portal />

@@ -28,22 +28,17 @@ export default class Install extends Component {
   async componentDidMount() {
     console.log("this" + this.props.match.params.install);
     const response = await fetch(`/api/installs/${this.props.match.params.install}`);
-    // console.log(await response.json());
     const body = await response.json();
-    // const bodytest = {installName: "test test"}
     this.setState({ installs: body, isLoading: false }, () =>
       console.log(this.state.installs[0].installName)
     );
   }
 
   render() {
-    // const { installs, isLoading } = this.state;
-    // this.state.isLoading
     if (this.state.isLoading) {
       return <Loading />;
     }
 
-    // const install = data.installs.find((p) => p.install === this.props.install);
 
     return (
       <div className="">

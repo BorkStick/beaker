@@ -5,7 +5,7 @@ export default function Button(props) {
   return (
     <button
       type="button"
-      class="btn btn-dark col-3 rounded-0"
+      className="btn btn-dark col-3 rounded-0"
       data-bs-toggle="button"
       autocomplete="off"
     >

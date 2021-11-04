@@ -22,11 +22,11 @@ export default function portal() {
         <InnerContainer>
           <Card>
             <Link to="/installs">
-            <a class="btn btn-dark" href="#" role="button">Install List</a>
+            <a className="btn btn-dark" href="#" role="button">Install List</a>
             </Link>
 
             <Link to="/users">
-            <a class="btn btn-dark" href="#" role="button">User List</a>
+            <a className="btn btn-dark" href="#" role="button">User List</a>
             </Link>
           </Card>
           <Card>

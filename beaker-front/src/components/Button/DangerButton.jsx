@@ -4,7 +4,7 @@ export default function DangerButton(props) {
   return (
     <button
       type="button"
-      class="btn btn-danger col-3 rounded-0"
+      className="btn btn-danger col-3 rounded-0"
       data-bs-toggle="button"
       autocomplete="off"
     >
