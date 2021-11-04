@@ -53,13 +53,13 @@ export default class InstallTest extends Component {
           <h3 className="">{this.state.installs[0].installName}</h3>
           <InnerContainer>
             <BackButton />
-            {/* <Card>
+            <Card>
               <h5 className="text-center">Install Info</h5>
               <div className="text-center pb-4">
                 
                 <span>
-                  <a href={installs.domain} target="_blank" rel="noreferrer">
-                    {installs.domain}
+                  <a href={this.state.installs[0].domain} target="_blank" rel="noreferrer">
+                    {this.state.installs[0].domain}
                   </a>
                 </span>
               </div>
@@ -69,7 +69,7 @@ export default class InstallTest extends Component {
                     <span>
                       <b>Install Name: </b>
                     </span>
-                    <span>{installs.installName}</span>
+                    <span>{this.state.installs[0].installName}</span>
                   </div>
                   <div>
                     <span>
@@ -77,11 +77,11 @@ export default class InstallTest extends Component {
                     </span>
                     <span>
                       <a
-                        href={installs.tempDomain}
+                        href={this.state.installs[0].tempDomain}
                         target="_blank"
                         rel="noreferrer"
                       >
-                        {installs.tempDomain}
+                        {this.state.installs[0].tempDomain}
                       </a>
                     </span>
                   </div>
@@ -92,9 +92,9 @@ export default class InstallTest extends Component {
                       <b>Owner: </b>
                     </span>
                     <Link
-                to={`/users/${installs.user}`} className="text-dark"
+                to={`/users/${this.state.installs[0].user}`} className="text-dark"
               >
-                    <span>{installs.owner}</span>
+                    <span>{this.state.installs[0].owner}</span>
                     </Link>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export default class InstallTest extends Component {
             <Card>
               <h5 className="text-center">Danger Zone</h5>
               <DangerButtonRow />
-            </Card> */}
+            </Card>
           </InnerContainer>
         </Container>
       </div>
