@@ -5,7 +5,6 @@ import host.bork.beakerback.repository.InstallRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class InstallController {
     // CREATE
     // create install
     @PostMapping("/add")
-    public Install createInstall(@Valid @RequestBody Install install) {
+    public Install createInstall(@RequestBody Install install) {
         return installRepository.save(install);
     }
 

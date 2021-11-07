@@ -6,7 +6,6 @@ import host.bork.beakerback.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +22,7 @@ public class UserController {
     // CREATE
     // create user
     @PostMapping("/add")
-    public User createUser(@Valid @RequestBody User user) {
+    public User createUser(@RequestBody User user) {
         return userRepository.save(user);
     }
 
