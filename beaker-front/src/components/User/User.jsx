@@ -16,7 +16,7 @@ export default class User extends Component {
 
   state = {
     isLoading: true,
-    installs: [],
+    users: [],
   };
 
   async componentDidMount() {

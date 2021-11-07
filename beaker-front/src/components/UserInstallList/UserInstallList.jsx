@@ -8,10 +8,14 @@ class UserInstallList extends Component {
   };
 
   async componentDidMount() {
-    const response = await fetch("/api/installs");
+    
+    const response = await fetch(`/api/installs/user/2`);
     const body = await response.json();
-    this.setState({ installs: body, isLoading: false });
+    this.setState({ installs: body, isLoading: false }, () =>
+      console.log("User Installs: " + this.state.installs[0].ownerId)
+    );
   }
+
 
   render() {
     const { installs, isLoading } = this.state;
