@@ -6,21 +6,21 @@ import { Card } from "../components/styles/Card.styled";
 
 import TopNav from "../components/TopNav/TopNav";
 import Logo from "../components/Logo/Logo";
-import InstallList from "../components/InstallList/InstallList";
 import { BackButton } from "../components/Button/BackButton";
+import AddInstallForm from "../components/AddInstallForm/AddInstallForm";
 
-export default function add_installs_page() {
+export default function add_install_page() {
   return (
     <>
       <TopNav />
       <Logo />
       <div>
         <Container>
-        <h3>Installs</h3>
+        <h3>Add Install</h3>
         <InnerContainer>
           <BackButton/>
           <Card>
-            <InstallList />
+            <AddInstallForm/>
           </Card>
           </InnerContainer>
         </Container>

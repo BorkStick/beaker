@@ -9,6 +9,7 @@ import TopNav from "../components/TopNav/TopNav";
 import Logo from "../components/Logo/Logo";
 import SearchInstall from "../components/SearchInstall/SearchInstall";
 import AddInstall from "../components/AddInstall/AddInstall";
+import AddUser from "../components/AddUser/AddUser";
 
 export default function portal() {
   return (
@@ -41,6 +42,7 @@ export default function portal() {
           </Card>
           <Card>
             <AddInstall />
+            <AddUser/>
           </Card>
         </InnerContainer>
       </Container>

@@ -6,7 +6,8 @@ import Users from "./pages/users_page";
 import User from "./components/User/User"
 import Installs from "./pages/installs_page";
 import Install from "./components/Install/Install"
-
+import AddInstall from "./pages/add_install_page";
+import AddUser from "./pages/add_user_page";
 
 function App() {
   
@@ -15,6 +16,12 @@ function App() {
       <Switch>
         <Route exact path="/installs">
           <Installs />
+        </Route>
+        <Route exact path="/add/install">
+          <AddInstall />
+        </Route>
+        <Route exact path="/add/user">
+          <AddUser />
         </Route>
         <Route
           path="/installs/:install"
