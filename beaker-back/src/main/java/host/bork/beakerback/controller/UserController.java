@@ -40,10 +40,19 @@ public class UserController {
         return userList;
     }
 
-    // get user by user name
+    // get user by user name (localhost:8080/api/users/username)
     @GetMapping(value = "/{value}", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<User> getByUserName(@PathVariable("value") String userName) {
         Iterable<User> usersIterable = userRepository.findByUserNameContainingIgnoreCase(userName);
+        List<User> userList = new ArrayList<>();
+        usersIterable.forEach(a -> userList.add(a));
+        return userList;
+    }
+
+    // get user by user ID (localhost:8080/api/users/4)
+    @GetMapping(value = "/id/{value}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<User> getByUserId(@PathVariable("value") Long userId) {
+        Iterable<User> usersIterable = userRepository.findByUserId(userId);
         List<User> userList = new ArrayList<>();
         usersIterable.forEach(a -> userList.add(a));
         return userList;
