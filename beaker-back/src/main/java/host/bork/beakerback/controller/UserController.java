@@ -1,16 +1,13 @@
 package host.bork.beakerback.controller;
 
-import host.bork.beakerback.model.Install;
+
 import host.bork.beakerback.model.User;
 import host.bork.beakerback.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -49,7 +46,7 @@ public class UserController {
         return userList;
     }
 
-    // get user by user ID (localhost:8080/api/users/4)
+    // get user by user ID (localhost:8080/api/users/id/4)
     @GetMapping(value = "/id/{value}", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<User> getByUserId(@PathVariable("value") Long userId) {
         Iterable<User> usersIterable = userRepository.findByUserId(userId);
