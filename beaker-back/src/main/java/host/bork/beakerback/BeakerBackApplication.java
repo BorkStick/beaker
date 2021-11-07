@@ -40,8 +40,8 @@ public class BeakerBackApplication {
 					borkhost.setTempDomain("https://borkhost.bork.host");
 					borkhost.setDomain("https://bork.host");
 					borkhost.setServerIp("10.0.0.68");
-					Date date = df.parse("1/1/2018");
-					borkhost.setCreatedAt(date);
+//					Date date = df.parse("1/1/2018");
+//					borkhost.setCreatedAt(date);
 
 					//
 					Install borktech = new Install();
@@ -51,8 +51,8 @@ public class BeakerBackApplication {
 					borktech.setTempDomain("https://borktech.bork.host");
 					borktech.setDomain("https://bork.tech");
 					borktech.setServerIp("10.0.0.80");
-					date = df.parse("10/1/2021");
-					borktech.setCreatedAt(date);
+//					date = df.parse("10/1/2021");
+//					borktech.setCreatedAt(date);
 
 					Install tylorninja = new Install();
 					tylorninja.setInstallName("tylorninja");
@@ -61,8 +61,8 @@ public class BeakerBackApplication {
 					tylorninja.setTempDomain("https://tylorninja.bork.host");
 					tylorninja.setDomain("https://tylor.ninja");
 					tylorninja.setServerIp("10.0.0.80");
-					date = df.parse("12/10/2000");
-					tylorninja.setCreatedAt(date);
+//					date = df.parse("12/10/2000");
+//					tylorninja.setCreatedAt(date);
 
 					Install borklol = new Install();
 					borklol.setInstallName("borklol");
@@ -71,14 +71,14 @@ public class BeakerBackApplication {
 					borklol.setTempDomain("https://borklol.bork.host");
 					borklol.setDomain("https://bork.lol");
 					borklol.setServerIp("10.0.0.80");
-					date = df.parse("12/10/2000");
-					borklol.setCreatedAt(date);
+//					date = df.parse("12/10/2000");
+//					borklol.setCreatedAt(date);
 
 					installRepository.save(borkhost);
 					installRepository.save(borktech);
 					installRepository.save(tylorninja);
 					installRepository.save(borklol);
-				} catch (ParseException e) {
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}

@@ -1,6 +1,8 @@
 package host.bork.beakerback.model;
 
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -28,7 +30,8 @@ public class Install implements Serializable {
     private String installName;
 
     // Created Date
-    @Temporal(TemporalType.DATE)
+    //@Temporal(TemporalType.DATE)
+    @CreationTimestamp
     @Column(name = "createdAt", nullable = false)
     private Date createdAt;
 
