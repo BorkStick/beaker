@@ -56,6 +56,15 @@ public class InstallController {
         return installList;
     }
 
+    // get install by user ID (localhost:8080/api/installs/user/{ownerId})
+    @GetMapping(value = "/user/{value}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Install> getByUserId(@PathVariable("value") Long ownerId) {
+        Iterable<Install> installsIterable = installRepository.findByOwnerId(ownerId);
+        List<Install> installList = new ArrayList<>();
+        installsIterable.forEach(a -> installList.add(a));
+        return installList;
+    }
+
     // UPDATE
     // update install
 
