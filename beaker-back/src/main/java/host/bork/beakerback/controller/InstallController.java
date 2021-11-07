@@ -4,13 +4,16 @@ import host.bork.beakerback.model.Install;
 import host.bork.beakerback.repository.InstallRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/api/installs")
@@ -50,7 +53,20 @@ public class InstallController {
 
     // UPDATE
     // update install
+<<<<<<< HEAD
 
+=======
+//    @PutMapping("/{installName}")
+//    public ResponseEntity<Install> update(@RequestBody Install install, @PathVariable String installName) {
+//        try{
+//            Install existingStudent=install.getInstallName(installName);
+//            installRepository.save(install);
+//            return new ResponseEntity<>(HttpStatus.OK);
+//        }catch (NoSuchElementException e){
+//            return new ResponseEntity<Install>(HttpStatus.NOT_FOUND);
+//        }
+//    }
+>>>>>>> ead7b258a757ed39826093e37248371d803f115c
 
     // DELETE
     // delete install
