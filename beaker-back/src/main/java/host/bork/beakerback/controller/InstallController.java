@@ -44,7 +44,6 @@ public class InstallController {
     // get install by install name
     @GetMapping(value = "/{value}", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Install> getByInstallName(@PathVariable("value") String installName) {
-
         Iterable<Install> installsIterable = installRepository.findByInstallNameContainingIgnoreCase(installName);
         List<Install> installList = new ArrayList<>();
         installsIterable.forEach(a -> installList.add(a));

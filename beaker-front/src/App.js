@@ -21,7 +21,6 @@ function App() {
           exact
           render={(props) => <Install { ...props} />}
         />
-        
         <Route exact path="/users">
           <Users />
         </Route>

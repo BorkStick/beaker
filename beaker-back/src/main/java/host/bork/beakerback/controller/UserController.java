@@ -1,15 +1,14 @@
 package host.bork.beakerback.controller;
 
+import host.bork.beakerback.model.Install;
 import host.bork.beakerback.model.User;
 import host.bork.beakerback.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -22,6 +21,17 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    // do CRUD Create Read Update Delete
+
+    // CREATE
+    // create user
+    @PostMapping("/add")
+    public User createUser(@Valid @RequestBody User user) {
+        return userRepository.save(user);
+    }
+
+    // READ
+    // get all users
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public List<User> index() {
         Iterable<User> usersIterable = userRepository.findAll();
@@ -30,6 +40,7 @@ public class UserController {
         return userList;
     }
 
+    // get user by user name
     @GetMapping(value = "/{value}", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<User> getByUserName(@PathVariable("value") String userName) {
         Iterable<User> usersIterable = userRepository.findByUserNameContainingIgnoreCase(userName);
@@ -37,6 +48,12 @@ public class UserController {
         usersIterable.forEach(a -> userList.add(a));
         return userList;
     }
+
+    //UPDATE
+    //update user info
+
+    //DELETE
+    //delete user
 
 
 }
