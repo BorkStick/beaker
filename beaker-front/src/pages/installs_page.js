@@ -8,6 +8,7 @@ import TopNav from "../components/TopNav/TopNav";
 import Logo from "../components/Logo/Logo";
 import InstallList from "../components/InstallList/InstallList";
 import { BackButton } from "../components/Button/BackButton";
+import AddButton from "../components/Button/AddButton";
 
 export default function installs_page() {
   return (
@@ -16,12 +17,19 @@ export default function installs_page() {
       <Logo />
       <div>
         <Container>
-        <h3>Installs</h3>
-        <InnerContainer>
-          <BackButton/>
-          <Card>
-            <InstallList />
-          </Card>
+          <h3>Installs</h3>
+          <InnerContainer>
+            <div className="row">
+              <div className="col ">
+                <BackButton />
+              </div>
+              <div className="col ">
+                <AddButton linkTo="/add/install"/>
+              </div>
+            </div>
+            <Card>
+              <InstallList />
+            </Card>
           </InnerContainer>
         </Container>
       </div>

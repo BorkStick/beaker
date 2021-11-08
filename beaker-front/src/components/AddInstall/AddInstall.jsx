@@ -6,7 +6,7 @@ export default function AddInstall() {
     <div>
       <h3>Add Install</h3>
       <div className="input-group mb-3">
-      <Link to="/add/install">
+        <Link to="/add/install">
           <button
             className="btn btn-dark rounded-0"
             type="button"
@@ -14,8 +14,7 @@ export default function AddInstall() {
           >
             <i className="fas fa-plus"></i>
           </button>
-          </Link>
-        
+        </Link>
       </div>
     </div>
   );

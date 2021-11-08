@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 import { Container } from "../styles/Container.styled";
 import { InnerContainer } from "../styles/InnerContainer.styled";
 import { Card } from "../styles/Card.styled";
@@ -8,12 +7,12 @@ import { Card } from "../styles/Card.styled";
 import TopNav from "../TopNav/TopNav";
 import Logo from "../Logo/Logo";
 import { BackButton } from "../Button/BackButton";
+import EditButton from "../Button/EditButton";
+
 import UserInstallList from "../UserInstallList/UserInstallList";
 import Loading from "../Loading/Loading";
 
 export default class User extends Component {
-
-
   state = {
     isLoading: true,
     users: [],
@@ -38,7 +37,14 @@ export default class User extends Component {
         <Container>
           <h3 className="">{this.state.users[0].userName}</h3>
           <InnerContainer>
-            <BackButton />
+            <div className="row">
+              <div className="col ">
+                <BackButton />
+              </div>
+              <div className="col ">
+                <EditButton linkTo="" button_text="Edit User"/>
+              </div>
+            </div>
             <Card>
               <h5 className="text-center">User Info</h5>
               <p>
@@ -72,7 +78,7 @@ export default class User extends Component {
             </Card>
             <Card>
               <h5 className="text-center">Billing</h5>
-              <h2>$0.00</h2>
+              <h2 className="text-center text-danger">$20.00</h2>
             </Card>
           </InnerContainer>
         </Container>
