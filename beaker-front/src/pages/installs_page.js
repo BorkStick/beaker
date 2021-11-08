@@ -9,6 +9,7 @@ import Logo from "../components/Logo/Logo";
 import InstallList from "../components/InstallList/InstallList";
 import { BackButton } from "../components/Button/BackButton";
 import AddButton from "../components/Button/AddButton";
+import SearchInsatll from "../components/SearchInstall/SearchInstall"
 
 export default function installs_page() {
   return (
@@ -27,6 +28,9 @@ export default function installs_page() {
                 <AddButton linkTo="/add/install"/>
               </div>
             </div>
+            <Card>
+              <SearchInsatll/>
+            </Card>
             <Card>
               <InstallList />
             </Card>

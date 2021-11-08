@@ -3,24 +3,19 @@ import React from "react";
 export default function SearchUser() {
   return (
     <div>
-      <h3>Search User</h3>
-      <form>
-        <div className="mb-3">
-          <label for="exampleInputEmail1" className="form-label">
-            Search Users
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
+          <h3>Search User</h3>
+    <div className="input-group mb-3">
+        <input type="text" className="form-control rounded-0" placeholder="Username" />
+        <div className="input-group-append">
+          <button
+            className="btn btn-dark rounded-0"
+            type="button"
+            id="button-addon2"
+          >
+            <i className="fas fa-search"></i>
+          </button>
         </div>
-
-        <button type="submit" className="btn btn-primary">
-          Search
-        </button>
-      </form>
+      </div>
     </div>
   );
 }

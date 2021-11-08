@@ -37,17 +37,7 @@ export default function TopNav() {
                 </Link>
               </li>
             </ul>
-            <form className="d-flex">
-              <input
-                className="form-control me-2 rounded-0"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-light rounded-0" type="submit">
-                Search
-              </button>
-            </form>
+            
           </div>
         </div>
       </nav>

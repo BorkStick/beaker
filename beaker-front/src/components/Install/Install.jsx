@@ -13,6 +13,7 @@ import DangerButtonRow from "../ButtonRow/DangerButtonRow";
 import { Link } from "react-router-dom";
 import Loading from "../Loading/Loading";
 import { BackButton } from "../Button/BackButton";
+import EditButton from "../Button/EditButton";
 
 export default class Install extends Component {
 
@@ -44,7 +45,14 @@ export default class Install extends Component {
         <Container>
           <h3 className="">{this.state.installs[0].installName}</h3>
           <InnerContainer>
-            <BackButton />
+          <div className="row">
+              <div className="col ">
+                <BackButton />
+              </div>
+              <div className="col ">
+                <EditButton linkTo="" button_text="Edit Install"/>
+              </div>
+            </div>
             <Card>
               <h5 className="text-center">Install Info</h5>
               <div className="text-center pb-4">

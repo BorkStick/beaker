@@ -9,6 +9,7 @@ import Logo from "../components/Logo/Logo";
 import UserList from "../components/UserList/UserList";
 import { BackButton } from '../components/Button/BackButton';
 import AddButton from '../components/Button/AddButton';
+import SearchUser from "../components/SearchUser/SearchUser"
 
 
 
@@ -29,6 +30,9 @@ export default function users_page() {
                 <AddButton linkTo="/add/user"/>
               </div>
             </div>
+            <Card>
+              <SearchUser/>
+            </Card>
           <Card>
             <UserList />
           </Card>
