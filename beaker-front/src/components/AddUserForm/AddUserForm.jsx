@@ -21,7 +21,7 @@ class AddUserForm extends Component {
   };
 
   submitHandler = (e) => {
-    //e.preventDefault()
+    e.preventDefault()
 
     console.log(this.state);
     axios.post("/api/users/add", this.state);

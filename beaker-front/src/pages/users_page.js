@@ -26,7 +26,7 @@ export default function users_page() {
               <div className="col ">
                 <BackButton />
               </div>
-              <div className="col ">
+              <div className="col d-flex flex-row-reverse">
                 <AddButton linkTo="/add/user"/>
               </div>
             </div>

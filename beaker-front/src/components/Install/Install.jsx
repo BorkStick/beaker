@@ -49,7 +49,7 @@ export default class Install extends Component {
               <div className="col ">
                 <BackButton />
               </div>
-              <div className="col ">
+              <div className="col d-flex flex-row-reverse">
                 <EditButton linkTo="" button_text="Edit Install"/>
               </div>
             </div>
