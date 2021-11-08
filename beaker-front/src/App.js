@@ -3,14 +3,13 @@ import "./App.css";
 
 import Portal from "./pages/portal";
 import Users from "./pages/users_page";
-import User from "./components/User/User"
+import User from "./components/User/User";
 import Installs from "./pages/installs_page";
-import Install from "./components/Install/Install"
+import Install from "./components/Install/Install";
 import AddInstall from "./pages/add_install_page";
 import AddUser from "./pages/add_user_page";
 
 function App() {
-  
   return (
     <Router>
       <Switch>
@@ -26,7 +25,7 @@ function App() {
         <Route
           path="/installs/:install"
           exact
-          render={(props) => <Install { ...props} />}
+          render={(props) => <Install {...props} />}
         />
         <Route exact path="/users">
           <Users />
@@ -34,7 +33,7 @@ function App() {
         <Route
           path="/users/:user"
           exact
-          render={(props) => <User { ...props} />}
+          render={(props) => <User {...props} />}
         />
         <Route path="/">
           <Portal />
